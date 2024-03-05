@@ -91,6 +91,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Aparelho.cs" />
+    <Compile Include="Pedido.cs" />
     <Compile Include="ConexaoBanco.cs" />
     <Compile Include="Fabricante.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
