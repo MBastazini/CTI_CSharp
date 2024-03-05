@@ -25,7 +25,21 @@ namespace CelularCTI.Modal
         public double Largura { get; set; }
         public double Peso { get; set; }
         public int Quantidade { get; set; }
-        public decimal Preco { get; set; }
+        public decimal Preco
+        {
+            get { return preco; }
+            set
+            {
+                if (value > 0)
+                {
+                    preco = value;
+                }
+                else
+                {
+                    throw new Exception("Preço deve ser maior que zero");
+                }
+            }
+        }
         public decimal Desconto { get; set; }
 
 
