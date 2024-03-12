@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CelularCTI.Modal
+namespace CelularCTI.Model
 {
     public class Fabricante
     {

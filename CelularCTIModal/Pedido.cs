@@ -1,11 +1,11 @@
-﻿using CelularCTI.Modal;
+﻿using CelularCTI.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CelularCTIModal
+namespace CelularCTI.Model
 {
     internal class Pedido
     {
