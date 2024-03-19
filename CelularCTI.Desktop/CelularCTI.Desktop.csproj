@@ -129,5 +129,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CelularCTIModal\CelularCTI.Model.csproj">
+      <Project>{1e29e0d7-6844-4f02-ac90-0ac21b646e15}</Project>
+      <Name>CelularCTI.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

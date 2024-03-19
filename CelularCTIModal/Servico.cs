@@ -76,13 +76,13 @@ namespace CelularCTI.Model
                 sql = "UPDATE aparelho SET " +
                     "id_fabricante = " + ap.Fabricante.Id_Fabricante + "," +
                     "modelo = '" + ap.Modelo + "'," +
-                    "largura = " + ap.Largura.Replace(',', '.') + "," +
-                    "altura = " + ap.Altura.Replace(',', '.') + "," +
-                    "espessura = " + ap.Espessura.Replace(',', '.') + "," +
-                    "peso = " + ap.Peso.Replace(',', '.') + "," +
+                    "largura = " + ap.Largura.ToString().Replace(',', '.') + "," +
+                    "altura = " + ap.Altura.ToString().Replace(',', '.') + "," +
+                    "espessura = " + ap.Espessura.ToString().Replace(',', '.') + "," +
+                    "peso = " + ap.Peso.ToString().Replace(',', '.') + "," +
                     "quantidade = " + ap.Quantidade + "," +
-                    "preco = " + ap.Preco.Replace(',', '.') + "," +
-                    "desconto = " + ap.Desconto.Replace(',', '.') + " " +
+                    "preco = " + ap.Preco.ToString().Replace(',', '.') + "," +
+                    "desconto = " + ap.Desconto.ToString().Replace(',', '.') + " " +
                     "WHERE id_aparelho = " + ap.Id_Aparelho;
                 ConexaoBanco.Executar(sql);
             }
@@ -221,6 +221,22 @@ namespace CelularCTI.Model
             NpgsqlDataReader dtr = ConexaoBanco.Selecionar(sql);
             while (dtr.Read())
                 fabricante.Add(ObjFabricante(ref dtr));
+            dtr.Close();
+
+            return fabricante;
+        }
+
+        public static Fabricante BuscarFabricante (Int64 id)
+        {
+            string sql;
+            Fabricante fabricante = new Fabricante();
+
+            sql = "SELECT * FROM fabricante " +
+                "WHERE id_fabricante = " + id;
+
+            NpgsqlDataReader dtr = ConexaoBanco.Selecionar(sql);
+            dtr.Read();
+            fabricante = ObjFabricante(ref dtr);
             dtr.Close();
 
             return fabricante;
