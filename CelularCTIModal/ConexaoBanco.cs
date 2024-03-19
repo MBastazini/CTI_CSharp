@@ -14,15 +14,8 @@ namespace CelularCTI.Model.Suporte
         //postgres utilizando o npgsql que é um drive nativo
         //para acesso ao postgres para o C#
 
-
-        // static string stringConexao = "Server = localhost; " +
-        //                              "Database = CelularCTI; Port=5432;" +
-        //                              "User ID= postgres; password = postgres;";
-
-
-        static string stringConexao = "Server = banco72a.postgresql.dbaas.com.br; " +
-                                      "Database = banco72a; Port=5432;" +
-                                      "User ID= banco72a; password = b@nco@unesp356;";
+        static string stringConexao = "Server = pgsql.projetoscti.com.br; Database=projetoscti;"
+            + "User ID=projetoscti; Password=123; Port=5432";
 
 
         static NpgsqlConnection cn;

@@ -72,7 +72,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pesquisar por:";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label1
             // 
@@ -139,7 +138,6 @@
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Celulares:";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // label4
             // 
@@ -150,7 +148,6 @@
             this.label4.Size = new System.Drawing.Size(13, 15);
             this.label4.TabIndex = 5;
             this.label4.Text = "a";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // numMaximo
             // 
