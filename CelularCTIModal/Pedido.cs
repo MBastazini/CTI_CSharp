@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CelularCTI.Model
 {
-    internal class Pedido
+    public class Pedido
     {
         private Int64 id_pedido;
         private Aparelho aparelho;

@@ -8,7 +8,7 @@ using Npgsql;
 
 namespace CelularCTI.Model
 {
-    internal class Servico
+    public class Servico
     {
         //Métodos Gerais que criam os objetos que representam
         // as entidades e carrega os respectivos dados nele.
@@ -198,19 +198,7 @@ namespace CelularCTI.Model
             return aparelho;
         }
 
-
-
-        public static List<Fabricante> TodosFabricantes()
-        {
-            List<Fabricante> fabricantes = new List<Fabricante>();
-            NpgsqlDataReader dtr = ConexaoBanco.Selecionar("SELECT * FROM fabricante order by nome");
-            while (dtr.Read())
-                fabricantes.Add(ObjFabricante(ref dtr));
-            dtr.Close();
-            return fabricantes;
-        }
-
-        public static List<Fabricante> ListarFabricante()
+        public static List<Fabricante> ListarFabricantes()
         {
             string sql;
             List<Fabricante> fabricante = new List<Fabricante>();
