@@ -32,5 +32,21 @@ namespace CelularCTI.Desktop
 
         }
 
+        private void btnPesquisarModelo_Click(object sender, EventArgs e)
+        {
+            aparelhos = Servico.BuscarAparelho(txtModelo.Text);
+            lstCelulares.DataSource = aparelhos;
+        }
+
+        private void btnPesquisarPreco_Click(object sender, EventArgs e)
+        {
+            aparelhos = Servico.BuscarAparelho(numMinimo.Value, numMaximo.Value);
+            lstCelulares.DataSource = aparelhos;
+        }
+
+        private void btnFabricante_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

@@ -30,12 +30,12 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmbFabricante = new System.Windows.Forms.ComboBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnFabricante = new System.Windows.Forms.Button();
+            this.btnPesquisarModelo = new System.Windows.Forms.Button();
+            this.btnPesquisarPreco = new System.Windows.Forms.Button();
             this.numMaximo = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtModelo = new System.Windows.Forms.TextBox();
             this.numMinimo = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -51,12 +51,12 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cmbFabricante);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnFabricante);
+            this.groupBox1.Controls.Add(this.btnPesquisarModelo);
+            this.groupBox1.Controls.Add(this.btnPesquisarPreco);
             this.groupBox1.Controls.Add(this.numMaximo);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtModelo);
             this.groupBox1.Controls.Add(this.numMinimo);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -80,35 +80,37 @@
             this.cmbFabricante.Size = new System.Drawing.Size(310, 23);
             this.cmbFabricante.TabIndex = 10;
             // 
-            // button3
+            // btnFabricante
             // 
-            this.button3.Location = new System.Drawing.Point(399, 152);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(55, 23);
-            this.button3.TabIndex = 9;
-            this.button3.Text = ">>";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnFabricante.Location = new System.Drawing.Point(399, 152);
+            this.btnFabricante.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnFabricante.Name = "btnFabricante";
+            this.btnFabricante.Size = new System.Drawing.Size(55, 23);
+            this.btnFabricante.TabIndex = 9;
+            this.btnFabricante.Text = ">>";
+            this.btnFabricante.UseVisualStyleBackColor = true;
+            this.btnFabricante.Click += new System.EventHandler(this.btnFabricante_Click);
             // 
-            // button2
+            // btnPesquisarModelo
             // 
-            this.button2.Location = new System.Drawing.Point(399, 95);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(55, 23);
-            this.button2.TabIndex = 8;
-            this.button2.Text = ">>";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnPesquisarModelo.Location = new System.Drawing.Point(399, 95);
+            this.btnPesquisarModelo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnPesquisarModelo.Name = "btnPesquisarModelo";
+            this.btnPesquisarModelo.Size = new System.Drawing.Size(55, 23);
+            this.btnPesquisarModelo.TabIndex = 8;
+            this.btnPesquisarModelo.Text = ">>";
+            this.btnPesquisarModelo.UseVisualStyleBackColor = true;
+            this.btnPesquisarModelo.Click += new System.EventHandler(this.btnPesquisarModelo_Click);
             // 
-            // button1
+            // btnPesquisarPreco
             // 
-            this.button1.Location = new System.Drawing.Point(399, 27);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(55, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = ">>";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnPesquisarPreco.Location = new System.Drawing.Point(399, 27);
+            this.btnPesquisarPreco.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnPesquisarPreco.Name = "btnPesquisarPreco";
+            this.btnPesquisarPreco.Size = new System.Drawing.Size(55, 23);
+            this.btnPesquisarPreco.TabIndex = 7;
+            this.btnPesquisarPreco.Text = ">>";
+            this.btnPesquisarPreco.UseVisualStyleBackColor = true;
             // 
             // numMaximo
             // 
@@ -138,14 +140,14 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "a";
             // 
-            // textBox1
+            // txtModelo
             // 
-            this.textBox1.Font = new System.Drawing.Font("Constantia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(82, 95);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(310, 23);
-            this.textBox1.TabIndex = 4;
+            this.txtModelo.Font = new System.Drawing.Font("Constantia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtModelo.Location = new System.Drawing.Point(82, 95);
+            this.txtModelo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtModelo.Name = "txtModelo";
+            this.txtModelo.Size = new System.Drawing.Size(310, 23);
+            this.txtModelo.TabIndex = 4;
             // 
             // numMinimo
             // 
@@ -243,16 +245,16 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtModelo;
         private System.Windows.Forms.NumericUpDown numMinimo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnFabricante;
+        private System.Windows.Forms.Button btnPesquisarModelo;
+        private System.Windows.Forms.Button btnPesquisarPreco;
         private System.Windows.Forms.NumericUpDown numMaximo;
         private System.Windows.Forms.ComboBox cmbFabricante;
         private System.Windows.Forms.ListBox lstCelulares;
