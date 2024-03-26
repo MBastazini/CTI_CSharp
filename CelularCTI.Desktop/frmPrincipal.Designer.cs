@@ -111,6 +111,7 @@
             this.btnPesquisarPreco.TabIndex = 7;
             this.btnPesquisarPreco.Text = ">>";
             this.btnPesquisarPreco.UseVisualStyleBackColor = true;
+            this.btnPesquisarPreco.Click += new System.EventHandler(this.btnPesquisarPreco_Click);
             // 
             // numMaximo
             // 

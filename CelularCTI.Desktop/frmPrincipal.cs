@@ -25,6 +25,7 @@ namespace CelularCTI.Desktop
         {
             fabricantes = Servico.ListarFabricantes();
             cmbFabricante.DataSource = fabricantes;
+            cmbFabricante.ValueMember = "id_fabricante";
             cmbFabricante.DisplayMember = "Nome";
 
             aparelhos = Servico.BuscarAparelho("");
