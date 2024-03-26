@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CelularCTI.Model;
+using Npgsql;
 
 namespace CelularCTI.Desktop
 {
@@ -28,7 +29,6 @@ namespace CelularCTI.Desktop
 
             aparelhos = Servico.BuscarAparelho("");
             lstCelulares.DataSource = aparelhos;
-
 
         }
 

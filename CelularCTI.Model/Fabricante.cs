@@ -11,8 +11,8 @@ namespace CelularCTI.Model
         //Atributos internos
         private Int64 id_Fabricante;
         private string nome;
-        private string descricao;
 
+        //Propriedades
         public Int64 Id_Fabricante 
         { 
             get { return id_Fabricante; } 
@@ -25,10 +25,15 @@ namespace CelularCTI.Model
             set {  nome = value; } 
         }
 
-        public string Descricao
+        //Construtor
+        public Fabricante(Int64 id_Fabricante, string nome)
         {
-            get { return descricao; } 
-            set { descricao = value; } 
+            this.id_Fabricante = id_Fabricante;
+            this.nome = nome;
+        }
+        public Fabricante()
+        {
+
         }
     }
 }

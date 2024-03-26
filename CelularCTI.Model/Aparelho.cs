@@ -14,7 +14,7 @@ namespace CelularCTI.Model
         private double expressura;
         private double largura;
         private double peso;
-        private int quantidade;
+        private long quantidade;
         private decimal preco;
         private decimal desconto;
         private string modelo;
@@ -27,7 +27,7 @@ namespace CelularCTI.Model
         public double Espessura { get; set; }
         public double Largura { get; set; }
         public double Peso { get; set; }
-        public int Quantidade { get; set; }
+        public long Quantidade { get; set; }
 
         public decimal Preco
         {
@@ -47,6 +47,14 @@ namespace CelularCTI.Model
         public decimal Desconto { get; set; }
         public string Modelo { get; set; }
         public double Altura { get; set; }
+
+        public override string ToString()
+        {
+            return Fabricante.Nome.PadRight(12) + " " +
+                Modelo.PadRight(25) + " " +
+                Preco.ToString("#,##0.00").PadLeft(10) + " " +
+                "   (" + Quantidade + "em estoque)";
+        }
 
     }
 }

@@ -14,9 +14,7 @@ namespace CelularCTI.Model
         // as entidades e carrega os respectivos dados nele.
         public static Fabricante ObjFabricante(ref NpgsqlDataReader dtr)
         {
-            Fabricante fab = new Fabricante();
-            fab.Id_Fabricante = Convert.ToInt64(dtr["id_fabricante"]);
-            fab.Nome = dtr["nome"].ToString();
+            Fabricante fab = new Fabricante(Convert.ToInt64(dtr["id_fabricante"]), dtr["nome"].ToString());
             return fab;
         }
 
@@ -25,7 +23,7 @@ namespace CelularCTI.Model
             Aparelho a = new Aparelho();
             a.Id_Aparelho = Convert.ToInt64(dtr["id_aparelho"]);
             a.Modelo = (String)dtr["modelo"];
-            a.Quantidade = (int)dtr["quantidade"];
+            a.Quantidade = (long)Convert.ToDouble(dtr["quantidade"]);
             a.Largura = Convert.ToDouble(dtr["largura"]);
             a.Altura = Convert.ToDouble(dtr["altura"]);
             a.Espessura = Convert.ToDouble(dtr["espessura"]);
