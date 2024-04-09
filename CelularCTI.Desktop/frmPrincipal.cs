@@ -51,6 +51,12 @@ namespace CelularCTI.Desktop
             lstCelulares.DataSource = aparelhos;
         }
 
+        private void cmbFabricante_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+
         private void btnNovo_Click(object sender, EventArgs e)
         {
             frmCadastrarAparelho frm = new frmCadastrarAparelho();
