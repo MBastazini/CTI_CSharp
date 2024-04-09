@@ -42,23 +42,23 @@
             this.numLargura = new System.Windows.Forms.NumericUpDown();
             this.lblLargura = new System.Windows.Forms.Label();
             this.gpbValores = new System.Windows.Forms.GroupBox();
+            this.numQuantidade = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
             this.numDesconto = new System.Windows.Forms.NumericUpDown();
             this.lblDesconto = new System.Windows.Forms.Label();
             this.numPreco = new System.Windows.Forms.NumericUpDown();
             this.lblPreço = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.numQuantidade = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
             this.gpbEspecifi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numPeso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numEspessura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numAltura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numLargura)).BeginInit();
             this.gpbValores.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numQuantidade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numDesconto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPreco)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numQuantidade)).BeginInit();
             this.SuspendLayout();
             // 
             // lblFabricante
@@ -213,6 +213,32 @@
             this.gpbValores.TabIndex = 14;
             this.gpbValores.TabStop = false;
             // 
+            // numQuantidade
+            // 
+            this.numQuantidade.DecimalPlaces = 2;
+            this.numQuantidade.Location = new System.Drawing.Point(97, 65);
+            this.numQuantidade.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numQuantidade.Name = "numQuantidade";
+            this.numQuantidade.Size = new System.Drawing.Size(133, 20);
+            this.numQuantidade.TabIndex = 13;
+            this.numQuantidade.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numQuantidade.ThousandsSeparator = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Constantia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(7, 66);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(76, 15);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Quantidade:";
+            // 
             // numDesconto
             // 
             this.numDesconto.DecimalPlaces = 2;
@@ -295,32 +321,6 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // numQuantidade
-            // 
-            this.numQuantidade.DecimalPlaces = 2;
-            this.numQuantidade.Location = new System.Drawing.Point(97, 65);
-            this.numQuantidade.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.numQuantidade.Name = "numQuantidade";
-            this.numQuantidade.Size = new System.Drawing.Size(133, 20);
-            this.numQuantidade.TabIndex = 13;
-            this.numQuantidade.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numQuantidade.ThousandsSeparator = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Constantia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(7, 66);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 15);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Quantidade:";
-            // 
             // frmCadastrarAparelho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -335,7 +335,7 @@
             this.Controls.Add(this.lblModelo);
             this.Controls.Add(this.lblFabricante);
             this.Name = "frmCadastrarAparelho";
-            this.Text = "frmCadastrarAparelho";
+            this.Text = "Cadastrar Aparelho";
             this.Load += new System.EventHandler(this.frmCadastrarAparelho_Load);
             this.gpbEspecifi.ResumeLayout(false);
             this.gpbEspecifi.PerformLayout();
@@ -345,9 +345,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numLargura)).EndInit();
             this.gpbValores.ResumeLayout(false);
             this.gpbValores.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numQuantidade)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numDesconto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPreco)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numQuantidade)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

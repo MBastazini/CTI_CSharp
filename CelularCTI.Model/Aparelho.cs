@@ -53,7 +53,7 @@ namespace CelularCTI.Model
             return Fabricante.Nome.PadRight(12) + " " +
                 Modelo.PadRight(25) + " " +
                 Preco.ToString("#,##0.00").PadLeft(10) + " " +
-                "   (" + Quantidade + "em estoque)";
+                "   (" + Quantidade + " em estoque)";
         }
 
     }

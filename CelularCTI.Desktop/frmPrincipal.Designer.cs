@@ -80,7 +80,7 @@
             this.cmbFabricante.Location = new System.Drawing.Point(82, 151);
             this.cmbFabricante.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cmbFabricante.Name = "cmbFabricante";
-            this.cmbFabricante.Size = new System.Drawing.Size(310, 32);
+            this.cmbFabricante.Size = new System.Drawing.Size(310, 23);
             this.cmbFabricante.TabIndex = 10;
             this.cmbFabricante.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbFabricante_KeyPress);
             // 
@@ -129,7 +129,7 @@
             0,
             0});
             this.numMaximo.Name = "numMaximo";
-            this.numMaximo.Size = new System.Drawing.Size(141, 31);
+            this.numMaximo.Size = new System.Drawing.Size(141, 23);
             this.numMaximo.TabIndex = 6;
             this.numMaximo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numMaximo.ThousandsSeparator = true;
@@ -146,7 +146,7 @@
             this.label4.Location = new System.Drawing.Point(227, 29);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(20, 24);
+            this.label4.Size = new System.Drawing.Size(13, 15);
             this.label4.TabIndex = 5;
             this.label4.Text = "a";
             // 
@@ -156,7 +156,7 @@
             this.txtModelo.Location = new System.Drawing.Point(82, 95);
             this.txtModelo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtModelo.Name = "txtModelo";
-            this.txtModelo.Size = new System.Drawing.Size(310, 31);
+            this.txtModelo.Size = new System.Drawing.Size(310, 23);
             this.txtModelo.TabIndex = 4;
             // 
             // numMinimo
@@ -171,7 +171,7 @@
             0,
             0});
             this.numMinimo.Name = "numMinimo";
-            this.numMinimo.Size = new System.Drawing.Size(141, 31);
+            this.numMinimo.Size = new System.Drawing.Size(141, 23);
             this.numMinimo.TabIndex = 3;
             this.numMinimo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numMinimo.ThousandsSeparator = true;
@@ -183,7 +183,7 @@
             this.label3.Location = new System.Drawing.Point(7, 156);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 24);
+            this.label3.Size = new System.Drawing.Size(69, 15);
             this.label3.TabIndex = 2;
             this.label3.Text = "Fabricante:";
             // 
@@ -194,7 +194,7 @@
             this.label2.Location = new System.Drawing.Point(25, 95);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 24);
+            this.label2.Size = new System.Drawing.Size(53, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "Modelo:";
             // 
@@ -205,7 +205,7 @@
             this.label1.Location = new System.Drawing.Point(33, 29);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 24);
+            this.label1.Size = new System.Drawing.Size(42, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Preço:";
             // 
@@ -225,10 +225,10 @@
             // lstCelulares
             // 
             this.lstCelulares.FormattingEnabled = true;
-            this.lstCelulares.ItemHeight = 24;
+            this.lstCelulares.ItemHeight = 15;
             this.lstCelulares.Location = new System.Drawing.Point(7, 22);
             this.lstCelulares.Name = "lstCelulares";
-            this.lstCelulares.Size = new System.Drawing.Size(440, 172);
+            this.lstCelulares.Size = new System.Drawing.Size(440, 169);
             this.lstCelulares.TabIndex = 0;
             // 
             // btnComprar
@@ -265,7 +265,7 @@
             // 
             // frmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(507, 489);
             this.Controls.Add(this.btnSair);
@@ -276,7 +276,7 @@
             this.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "frmPrincipal";
-            this.Text = "ok";
+            this.Text = "Buscar aparelhos";
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
