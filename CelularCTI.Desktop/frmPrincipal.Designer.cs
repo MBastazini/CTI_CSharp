@@ -232,7 +232,6 @@
             this.lstCelulares.Name = "lstCelulares";
             this.lstCelulares.Size = new System.Drawing.Size(602, 147);
             this.lstCelulares.TabIndex = 0;
-            this.lstCelulares.SelectedIndexChanged += new System.EventHandler(this.lstCelulares_SelectedIndexChanged);
             // 
             // btnComprar
             // 

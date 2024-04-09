@@ -68,11 +68,6 @@ namespace CelularCTI.Desktop
             Close();
         }
 
-        private void lstCelulares_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnComprar_Click(object sender, EventArgs e)
         {
             //Abrir um popup perguntando se deseja comprar o aparelho selecionado (na ListBox)
