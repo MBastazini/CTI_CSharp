@@ -50,5 +50,15 @@ namespace CelularCTI.Desktop
             aparelhos = Servico.BuscarAparelhos(cmbFabricante.SelectedItem as Fabricante);
             lstCelulares.DataSource = aparelhos;
         }
+
+        private void cmbFabricante_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void txtModelo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
     }
 }
