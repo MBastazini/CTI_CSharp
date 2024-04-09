@@ -59,13 +59,15 @@ namespace CelularCTI.Model
                     "(id_aparelho, id_fabricante, modelo, largura, altura, espessura, peso, quantidade, preco, desconto) VALUES (DEFAULT, " +
                     ap.Fabricante.Id_Fabricante + ",'" + 
                     ap.Modelo + "'," + 
-                    ap.Largura + "," + 
-                    ap.Altura + "," + 
-                    ap.Espessura + "," + 
-                    ap.Peso + "," + 
-                    ap.Quantidade + "," + 
-                    ap.Preco + "," + 
-                    ap.Desconto + ")";
+                    ap.Largura.ToString().Replace(',', '.') + "," +
+                    ap.Altura.ToString().Replace(',', '.') + "," +
+                    ap.Espessura.ToString().Replace(',', '.') + "," +
+                    ap.Peso.ToString().Replace(',', '.') + "," +
+                    ap.Quantidade + "," +
+                    ap.Preco.ToString().Replace(',', '.') + "," +
+                    ap.Desconto.ToString().Replace(',', '.') + ")";
+
+                Console.WriteLine(sql);
                 ConexaoBanco.Executar(sql);
 
             }

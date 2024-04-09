@@ -50,5 +50,16 @@ namespace CelularCTI.Desktop
             aparelhos = Servico.BuscarAparelhos(cmbFabricante.SelectedItem as Fabricante);
             lstCelulares.DataSource = aparelhos;
         }
+
+        private void btnNovo_Click(object sender, EventArgs e)
+        {
+            frmCadastrarAparelho frm = new frmCadastrarAparelho();
+            frm.ShowDialog();
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

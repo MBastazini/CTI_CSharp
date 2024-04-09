@@ -42,6 +42,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lstCelulares = new System.Windows.Forms.ListBox();
+            this.btnComprar = new System.Windows.Forms.Button();
+            this.btnNovo = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numMaximo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMinimo)).BeginInit();
@@ -129,6 +132,11 @@
             this.numMaximo.TabIndex = 6;
             this.numMaximo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numMaximo.ThousandsSeparator = true;
+            this.numMaximo.Value = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
             // 
             // label4
             // 
@@ -208,7 +216,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupBox2.Size = new System.Drawing.Size(454, 249);
+            this.groupBox2.Size = new System.Drawing.Size(454, 221);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Celulares:";
@@ -222,11 +230,46 @@
             this.lstCelulares.Size = new System.Drawing.Size(440, 184);
             this.lstCelulares.TabIndex = 0;
             // 
+            // btnComprar
+            // 
+            this.btnComprar.Font = new System.Drawing.Font("Constantia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnComprar.Location = new System.Drawing.Point(25, 441);
+            this.btnComprar.Name = "btnComprar";
+            this.btnComprar.Size = new System.Drawing.Size(100, 46);
+            this.btnComprar.TabIndex = 6;
+            this.btnComprar.Text = "Comprar";
+            this.btnComprar.UseVisualStyleBackColor = true;
+            // 
+            // btnNovo
+            // 
+            this.btnNovo.Font = new System.Drawing.Font("Constantia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNovo.Location = new System.Drawing.Point(191, 441);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(100, 46);
+            this.btnNovo.TabIndex = 7;
+            this.btnNovo.Text = "Novo";
+            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
+            // 
+            // btnSair
+            // 
+            this.btnSair.Font = new System.Drawing.Font("Constantia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.Location = new System.Drawing.Point(362, 441);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(100, 46);
+            this.btnSair.TabIndex = 8;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(490, 444);
+            this.ClientSize = new System.Drawing.Size(507, 489);
+            this.Controls.Add(this.btnSair);
+            this.Controls.Add(this.btnNovo);
+            this.Controls.Add(this.btnComprar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -259,6 +302,9 @@
         private System.Windows.Forms.NumericUpDown numMaximo;
         private System.Windows.Forms.ComboBox cmbFabricante;
         private System.Windows.Forms.ListBox lstCelulares;
+        private System.Windows.Forms.Button btnComprar;
+        private System.Windows.Forms.Button btnNovo;
+        private System.Windows.Forms.Button btnSair;
     }
 }
 
