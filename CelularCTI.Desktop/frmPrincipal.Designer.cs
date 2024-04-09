@@ -45,6 +45,7 @@
             this.btnComprar = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
+            this.btnRecarregar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numMaximo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMinimo)).BeginInit();
@@ -64,7 +65,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(15, 15);
+            this.groupBox1.Location = new System.Drawing.Point(93, 15);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -211,40 +212,43 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnRecarregar);
             this.groupBox2.Controls.Add(this.lstCelulares);
             this.groupBox2.Font = new System.Drawing.Font("Constantia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(15, 214);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupBox2.Size = new System.Drawing.Size(454, 221);
+            this.groupBox2.Size = new System.Drawing.Size(616, 201);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Celulares:";
             // 
             // lstCelulares
             // 
+            this.lstCelulares.Font = new System.Drawing.Font("Lucida Console", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstCelulares.FormattingEnabled = true;
-            this.lstCelulares.ItemHeight = 15;
             this.lstCelulares.Location = new System.Drawing.Point(7, 22);
             this.lstCelulares.Name = "lstCelulares";
-            this.lstCelulares.Size = new System.Drawing.Size(440, 169);
+            this.lstCelulares.Size = new System.Drawing.Size(602, 147);
             this.lstCelulares.TabIndex = 0;
+            this.lstCelulares.SelectedIndexChanged += new System.EventHandler(this.lstCelulares_SelectedIndexChanged);
             // 
             // btnComprar
             // 
             this.btnComprar.Font = new System.Drawing.Font("Constantia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComprar.Location = new System.Drawing.Point(25, 441);
+            this.btnComprar.Location = new System.Drawing.Point(60, 421);
             this.btnComprar.Name = "btnComprar";
             this.btnComprar.Size = new System.Drawing.Size(100, 46);
             this.btnComprar.TabIndex = 6;
             this.btnComprar.Text = "Comprar";
             this.btnComprar.UseVisualStyleBackColor = true;
+            this.btnComprar.Click += new System.EventHandler(this.btnComprar_Click);
             // 
             // btnNovo
             // 
             this.btnNovo.Font = new System.Drawing.Font("Constantia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNovo.Location = new System.Drawing.Point(191, 441);
+            this.btnNovo.Location = new System.Drawing.Point(271, 421);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(100, 46);
             this.btnNovo.TabIndex = 7;
@@ -255,7 +259,7 @@
             // btnSair
             // 
             this.btnSair.Font = new System.Drawing.Font("Constantia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(362, 441);
+            this.btnSair.Location = new System.Drawing.Point(482, 421);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(100, 46);
             this.btnSair.TabIndex = 8;
@@ -263,11 +267,21 @@
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
+            // btnRecarregar
+            // 
+            this.btnRecarregar.Location = new System.Drawing.Point(7, 175);
+            this.btnRecarregar.Name = "btnRecarregar";
+            this.btnRecarregar.Size = new System.Drawing.Size(165, 23);
+            this.btnRecarregar.TabIndex = 1;
+            this.btnRecarregar.Text = "Recarregar";
+            this.btnRecarregar.UseVisualStyleBackColor = true;
+            this.btnRecarregar.Click += new System.EventHandler(this.btnRecarregar_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(507, 489);
+            this.ClientSize = new System.Drawing.Size(644, 489);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.btnComprar);
@@ -306,6 +320,7 @@
         private System.Windows.Forms.Button btnComprar;
         private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Button btnRecarregar;
     }
 }
 

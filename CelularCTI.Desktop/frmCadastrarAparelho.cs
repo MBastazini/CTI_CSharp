@@ -36,6 +36,7 @@ namespace CelularCTI.Desktop
 
                 Servico.Salvar(ap);
                 MessageBox.Show("Aparelho salvo com sucesso", Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
             catch (Exception ex)
             {

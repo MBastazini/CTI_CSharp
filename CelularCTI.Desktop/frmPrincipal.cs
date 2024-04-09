@@ -67,5 +67,48 @@ namespace CelularCTI.Desktop
         {
             Close();
         }
+
+        private void lstCelulares_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnComprar_Click(object sender, EventArgs e)
+        {
+            //Abrir um popup perguntando se deseja comprar o aparelho selecionado (na ListBox)
+            //Se sim, reduzir 1 na quantidad em estoque e salvar no banco
+            //Se não, não fazer nada
+            Aparelho ap = lstCelulares.SelectedItem as Aparelho;
+
+            if (ap == null)
+            {
+                MessageBox.Show("Selecione um aparelho para comprar", Text, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            {
+                DialogResult dr = MessageBox.Show("Deseja comprar o aparelho " + ap.Modelo + "?", Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr == DialogResult.Yes)
+                {
+                    ap.Quantidade -= 1;
+                    Servico.Salvar(ap);
+                    MessageBox.Show("Aparelho comprado com sucesso", Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    aparelhos = Servico.BuscarAparelho("");
+                    lstCelulares.DataSource = aparelhos;
+                }
+                else
+                {
+                    MessageBox.Show("Compra cancelada", Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+
+
+        }
+
+        private void btnRecarregar_Click(object sender, EventArgs e)
+        {
+            aparelhos = Servico.BuscarAparelho("");
+            lstCelulares.DataSource = aparelhos;
+        }
     }
 }
