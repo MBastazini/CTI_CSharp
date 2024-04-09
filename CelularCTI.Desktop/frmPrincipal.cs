@@ -47,7 +47,8 @@ namespace CelularCTI.Desktop
 
         private void btnFabricante_Click(object sender, EventArgs e)
         {
-           
+            aparelhos = Servico.BuscarAparelhos(cmbFabricante.SelectedItem as Fabricante);
+            lstCelulares.DataSource = aparelhos;
         }
     }
 }
