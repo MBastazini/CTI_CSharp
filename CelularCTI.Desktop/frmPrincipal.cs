@@ -56,9 +56,5 @@ namespace CelularCTI.Desktop
             e.Handled = true;
         }
 
-        private void txtModelo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
-        }
     }
 }

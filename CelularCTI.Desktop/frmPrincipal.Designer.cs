@@ -150,7 +150,6 @@
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(310, 31);
             this.txtModelo.TabIndex = 4;
-            this.txtModelo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtModelo_KeyPress);
             // 
             // numMinimo
             // 
