@@ -27,9 +27,11 @@ namespace CelularCTI.Desktop
             cmbFabricante.DataSource = fabricantes;
             cmbFabricante.ValueMember = "id_fabricante";
             cmbFabricante.DisplayMember = "Nome";
+            cmbFabricante.SelectedIndex = -1;
 
             aparelhos = Servico.BuscarAparelho("");
             lstCelulares.DataSource = aparelhos;
+
 
         }
 
@@ -50,5 +52,26 @@ namespace CelularCTI.Desktop
             aparelhos = Servico.BuscarAparelhos(cmbFabricante.SelectedItem as Fabricante);
             lstCelulares.DataSource = aparelhos;
         }
-    }
+
+		private void btnListar_Click(object sender, EventArgs e)
+		{
+            aparelhos = Servico.BuscarAparelho("");
+            lstCelulares.DataSource = aparelhos;
+		}
+
+		private void btnNovo_Click(object sender, EventArgs e)
+		{
+            frmCadastrarAparelho frm = new frmCadastrarAparelho();
+            frm.ShowDialog();
+		}
+
+		private void btnSair_Click(object sender, EventArgs e)
+		{
+            DialogResult resposta;
+            resposta = MessageBox.Show("Deseja realmente encerrar a aplicação",
+                this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resposta == DialogResult.Yes)
+                this.Close();
+		}
+	}
 }
